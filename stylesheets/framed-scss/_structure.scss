@@ -1,0 +1,99 @@
+@import "compass/utilities/general/clearfix";
+
+
+// Basics
+body {
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: none;
+  margin: 0;
+  min-height: 100%;
+}
+
+div[data-role="page"] {
+  margin: 0;
+  max-width: 960px;
+  overflow: hidden;
+  @media screen and (min-width: 960px) {
+    margin: 0 auto;
+  }
+}
+
+img {
+  display: block;
+  width: 100%;
+}
+
+
+// Layout Foundations
+.row {
+  @include pie-clearfix;
+  display: block;
+  margin: 0;
+  padding: 0;
+}
+
+.column {
+  display: inline-block;
+  float: left;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+.x100 { width: 100%; }
+.x75  { width: 75%; }
+.x66  { width: 66.667%; }
+.x50  { width: 50%; }
+.x33  { width: 33.333%; }
+.x25  { width: 25%; }
+.x20  { width: 20%; }
+
+.element                      { margin: 0 4px 0 0; }
+.column:first-child .element  { margin-left: 4px; }
+.column:last-child .element   { margin-right: 4px; }
+
+// Responsive Mutations
+.row.collapse .column { float: none; width: 100%; }
+@media screen and (max-width:1024px) {
+  .row.collapse-1024 > .column { float: none; width: 100%; }
+  .show-over-1024  { display: none; }
+}
+@media screen and (max-width:768px) {
+  .row.collapse-768 > .column { float: none; width: 100%; }
+  .show-over-768  { display: none; }
+}
+@media screen and (max-width:600px) {
+  .row.collapse-600 > .column { float: none; width: 100%; }
+  .show-over-600 { display: none; }
+}
+@media screen and (max-width:480px) {
+  .row.collapse-480 > .column { float: none; width: 100%; }
+  .show-over-480 { display: none; }
+}
+
+@media screen and (min-width:1025px) {
+  .show-under-1024 { display: none; }
+}
+@media screen and (min-width:769px) {
+  .show-under-768 { display: none; }
+}
+@media screen and (min-width:601px) {
+  .show-under-600 { display: none; }
+}
+@media screen and (min-width:481px) {
+  .show-under-480 { display: none; }
+}
+
+// Media Blocks
+.media { margin-bottom: 0; overflow:hidden; *overflow:visible; zoom:1; }
+.media, .bd { overflow:hidden; _overflow:visible; zoom:1; }
+.media .img { float:left; margin-right: 8px; }
+.media .img img { display:block; }
+.media .imgExt { float:right; margin-left: 8px; }
+
+
+/* Useless illustrative styles. */
+.row { background: transparentize(#008f58,0.9) #008f58; }
+.column { background: transparentize(#00558e,0.9); }
+.element { background: transparentize(#541e8d,0.9); }
+.element > p:only-child { text-align: center; }
