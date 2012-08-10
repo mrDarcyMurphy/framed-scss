@@ -90,10 +90,3 @@ img {
 .media .img { float:left; margin-right: 8px; }
 .media .img img { display:block; }
 .media .imgExt { float:right; margin-left: 8px; }
-
-
-/* Useless illustrative styles. */
-.row { background: transparentize(#008f58,0.9) #008f58; }
-.column { background: transparentize(#00558e,0.9); }
-.element { background: transparentize(#541e8d,0.9); }
-.element > p:only-child { text-align: center; }
